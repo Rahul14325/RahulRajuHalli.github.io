@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahul Rajuhalli | Portfolio</title>
+  <meta name="description" content="Portfolio of Rahul Rajuhalli — projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --panel:#111827;     /* gray-900 */
+      --text:#e5e7eb;      /* gray-200 */
+      --muted:#9ca3af;     /* gray-400 */
+      --brand:#60a5fa;     /* blue-400 */
+      --accent:#22d3ee;    /* cyan-400 */
+      --card:#1f2937;      /* gray-800 */
+      --ring: 0 0 0 3px rgba(96,165,250,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text); background:linear-gradient(180deg, var(--bg), #0b1022 60%);
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px; margin:0 auto; padding:0 1rem}
+    /* Header */
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(150%) blur(6px);
+      background:rgba(15,23,42,.7); border-bottom:1px solid rgba(255,255,255,.06); z-index:50;
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0}
+    .logo{display:flex; align-items:center; gap:.75rem; font-weight:700}
+    .avatar{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; color:#0b1022; background:linear-gradient(135deg,var(--brand),var(--accent)); font-weight:800}
+    nav ul{display:flex; list-style:none; gap:1rem; margin:0; padding:0}
+    nav a{color:var(--text); padding:.5rem .75rem; border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,.06)}
+    /* Hero */
+    .hero{padding:5rem 0 3rem; text-align:center}
+    h1{font-size:clamp(2rem, 4vw + 1rem, 3rem); margin:.5rem 0}
+    .subtitle{color:var(--muted); max-width:720px; margin:0 auto 1.5rem}
+    .cta{display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap}
+    .btn{display:inline-block; padding:.75rem 1rem; border-radius:14px; font-weight:600; border:1px solid rgba(255,255,255,.12)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent)); color:#0b1022; border:none}
+    .btn:hover{filter:brightness(1.05)}
+    /* Sections */
+    section{padding:3rem 0}
+    h2{font-size:1.6rem; margin:0 0 1rem}
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:1.25rem}
+    .grid{display:grid; gap:1rem}
+    @media(min-width:700px){
+      .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+      .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    }
+    .kpis{display:flex; gap:1rem; flex-wrap:wrap}
+    .kpi{flex:1 1 160px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); padding:1rem; border-radius:14px; text-align:center}
+    .kpi strong{font-size:1.4rem}
+    /* Footer */
+    footer{padding:2rem 0; color:var(--muted); border-top:1px solid rgba(255,255,255,.06)}
+    .social{display:flex; gap:.75rem; justify-content:center}
+    .tag{display:inline-block; padding:.35rem .6rem; border:1px solid rgba(255,255,255,.12); border-radius:999px; font-size:.85rem; color:var(--muted)}
+    /* Accessible skip link */
+    .skip-link{position:absolute; left:-1000px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip-link:focus{position:static; width:auto; height:auto; padding:.5rem; background:var(--card); border-radius:8px}
+    /* Project card */
+    .project h3{margin:.25rem 0}
+    .project p{color:var(--muted); margin:.25rem 0 .6rem}
+    .project a.btn{font-size:.95rem}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <div class="logo" aria-label="Rahul Rajuhalli">
+        <div class="avatar" aria-hidden="true">RR</div>
+        <span>Rahul Rajuhalli</span>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <p class="tag">Open to opportunities</p>
+      <h1>Hi, I'm Rahul — a developer who loves building clean, fast web apps.</h1>
+      <p class="subtitle">I focus on simple UX, accessible UI, and performance. Below are a few things I've worked on and what I can help with.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="./Rahul-Rajuhalli-Resume.pdf" download>Download Résumé</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>Hello! I'm <strong>Rahul Rajuhalli</strong>. I enjoy turning ideas into delightful products. My interests include modern JavaScript, clean HTML/CSS, and building APIs. When I'm not coding, I read, explore new tech, and learn something new every day.</p>
+        <div class="kpis" aria-label="Key facts">
+          <div class="kpi"><strong>3+</strong><br><span class="muted">Years coding</span></div>
+          <div class="kpi"><strong>10+</strong><br><span class="muted">Projects</span></div>
+          <div class="kpi"><strong>100%</strong><br><span class="muted">Curious</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid cols-3">
+        <div class="card"><strong>Frontend</strong><br><span class="muted">HTML, CSS, JavaScript, React</span></div>
+        <div class="card"><strong>Backend</strong><br><span class="muted">Node.js, Express, REST APIs</span></div>
+        <div class="card"><strong>Tools</strong><br><span class="muted">Git, GitHub, VS Code, Postman</span></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid cols-2">
+        <article class="card project">
+          <span class="tag">Featured</span>
+          <h3>Project One</h3>
+          <p>A fast, responsive landing page template with semantic HTML and minimal CSS.</p>
+          <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+        </article>
+        <article class="card project">
+          <h3>Project Two</h3>
+          <p>Simple REST API built with Node.js and Express for learning CRUD operations.</p>
+          <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+        </article>
+        <article class="card project">
+          <h3>Portfolio Template</h3>
+          <p>This very page: clean, single-file, and easy to customize.</p>
+          <a class="btn" href="#projects">You're here</a>
+        </article>
+        <article class="card project">
+          <h3>Todo App</h3>
+          <p>A tiny, no-framework todo list with localStorage persistence.</p>
+          <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+        <p>
+          <a class="btn primary" href="mailto:rahul.rajuhalli@example.com">Email Me</a>
+          <a class="btn" href="tel:+919999999999">Call</a>
+          <a class="btn" href="https://linkedin.com/in/rahul-rajuhalli" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/rahul-rajuhalli" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social" aria-label="Social links">
+        <a href="https://linkedin.com/in/rahul-rajuhalli" target="_blank" rel="noopener">LinkedIn</a>
+        <span>·</span>
+        <a href="https://github.com/rahul-rajuhalli" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="mailto:rahul.rajuhalli@example.com">Email</a>
+      </div>
+      <p style="text-align:center; margin-top:1rem">© <span id="year"></span> Rahul Rajuhalli • Built with pure HTML & CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
